@@ -1,0 +1,45 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.692);
+  display: none;
+}
+
+.open {
+  width: 100vw;
+  height: 100vh;
+  animation: fadeIn 900ms ease;
+}
+
+.close {
+  animation: fadeOut 1s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+  }
+  10% {
+    opacity: 1;
+    filter: brightness(2) blur(10px);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    filter: brightness(2) blur(10px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(20px);
+  }
+}

@@ -1,0 +1,21 @@
+.TodoCounter {
+  background-color: #2b2d3d;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.TodoCounter .TodoCounter-progress {
+  background-color: #63fea8;
+  border-radius: inherit;
+  height: 20px;
+}
+
+.TodoCounter-progress__porcentage {
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-weight: bold;
+  color: #63fea8;
+  mix-blend-mode: difference;
+}

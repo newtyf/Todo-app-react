@@ -1,0 +1,62 @@
+.formTodo {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: #1e1f23;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.formTodo label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.formTodo textarea {
+  padding: 15px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #2b2d3d;
+  color: white;
+  font-weight: bold;
+  resize: vertical;
+  max-height: 500px;
+  min-height: 120px;
+}
+
+.formTodo textarea::-webkit-scrollbar {
+  width: 5px;
+  background-color: #52556f;
+  border-radius: 0 15px 0;
+}
+
+.formTodo textarea::-webkit-resizer {
+  display: none;
+}
+
+.formTodo textarea::-webkit-scrollbar-thumb {
+  background-color: #2b2d3d;
+}
+
+.formTodo textarea:focus {
+  outline: 2px solid #52556f;
+}
+
+.formTodo div button {
+  border: 1px solid #52556f;
+  border-radius: 3px;
+  margin-top: 15px;
+  padding: 5px;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.formTodo div button:hover {
+  background-color: #2b2d3d;
+}

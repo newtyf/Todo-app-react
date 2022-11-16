@@ -1,0 +1,112 @@
+.TodoItem {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+/* Customize the label (the container) */
+.TodoItem .container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  display: block;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border: 1px solid #52556f;
+  border-radius: 10px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #63fea8;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 17px;
+  top: 9px;
+  width: 6px;
+  height: 18px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.TodoItem .TodoItem-content {
+  background-color: #272e3c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  width: 83%;
+  font-size: 20px;
+  color: white;
+  border-radius: 20px;
+}
+
+.TodoItem .TodoItem-content.active {
+  background-color: #2664fa;
+}
+
+.TodoItem .TodoItem-content p {
+  padding: 0 5px;
+  margin: 15px 5px;
+}
+
+.TodoItem .TodoItem-content p.active {
+  text-decoration: line-through;
+}
+
+.TodoItem .TodoItem-content span{
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.TodoItem .TodoItem-content span:hover{
+  background-color: rgba(203, 11, 11, 0.456);
+  border-radius: 10px;
+}

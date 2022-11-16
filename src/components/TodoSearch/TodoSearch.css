@@ -1,0 +1,26 @@
+.TodoSearch {
+  width: 100%;
+  height: 45px;
+  padding: 0 10px;
+  margin-top: 15px;
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
+
+.TodoSearch input {
+  width: 100%;
+  height: 100%;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 20px;
+  background: url("/public/lupa.svg") no-repeat right #2b2d3d;
+  background-size: 15px;
+  background-position-x: 97%;
+  color: white;
+  font-weight: bold;
+}
+
+.TodoSearch input:focus {
+  outline: 2px solid #52556f;
+}
