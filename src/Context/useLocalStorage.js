@@ -11,7 +11,7 @@ function useLocalStorage(keyName) {
         let parsedItem = [];
 
         if (!localStorageItem) {
-          localStorage.setItem(keyName, JSON.stringify([{text: "a", completed: false}]));
+          localStorage.setItem(keyName, JSON.stringify([]));
         } else {
           parsedItem = JSON.parse(localStorageItem);
         }

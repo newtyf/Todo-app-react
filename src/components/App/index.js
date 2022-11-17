@@ -1,16 +1,16 @@
-import { TodoContext } from "../Context";
-import { TodoCounter } from "../components/TodoCounter";
-import { TodoSearch } from "../components/TodoSearch";
-import { TodoList } from "../components/TodoList";
-import { TodoItem } from "../components/TodoItem";
-import { CreateTodoButtom } from "../components/CreateTodoButtom";
-import { HeaderTodo } from "../components/HeaderTodo";
-import { TodoError } from "../components/TodoError";
-import { TodoLoading } from "../components/TodoLoading";
-import { TodoEmpty } from "../components/TodoEmpty";
-import { TodoNotFound } from "../components/TodoNotFound";
-import { Modal } from "../components/Modal";
-import { TodoForm } from "../components/TodoForm";
+import { TodoContext } from "../../Context";
+import { TodoCounter } from "../TodoCounter";
+import { TodoSearch } from "../TodoSearch";
+import { TodoList } from "../TodoList";
+import { TodoItem } from "../TodoItem";
+import { CreateTodoButtom } from "../CreateTodoButtom";
+import { HeaderTodo } from "../HeaderTodo";
+import { TodoError } from "../TodoError";
+import { TodoLoading } from "../TodoLoading";
+import { TodoEmpty } from "../TodoEmpty";
+import { TodoNotFound } from "../TodoNotFound";
+import { Modal } from "../Modal";
+import { TodoForm } from "../TodoForm";
 import "./App.css";
 import { useContext } from "react";
 
@@ -44,7 +44,7 @@ function App() {
       <TodoList>
         {error && <TodoError></TodoError>}
         {loading &&
-          new Array(5).fill(1).map((i) => <TodoLoading key={i}></TodoLoading>)}
+          new Array(5).fill(1).map((i, index) => <TodoLoading key={index}></TodoLoading>)}
         {!loading && !searchedTodos.length && searchValue.length < 1 && (
           <TodoEmpty></TodoEmpty>
         )}
